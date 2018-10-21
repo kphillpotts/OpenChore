@@ -13,9 +13,9 @@
             
         </Grid.RowDefinitions>
         
-        <localViews:ChildHeaderView BindingContext="{Binding User}"/>
+        <localViews:ChildHeaderView/>
         
-        <ListView x:Name="ChoreList" ItemsSource="{Binding Chores}" Grid.Row="1"
+        <ListView x:Name="ChoreList" ItemsSource="{Binding SelectedUserChores}" Grid.Row="1"
                   ItemTapped="Handle_ItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>

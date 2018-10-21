@@ -37,7 +37,7 @@ namespace OpenChore.DataStore.Mock
                     award.Points = chore.Points;
                     mockChoreAwards.Add(award);
                 }
-                user.Points = await StoreManager.UserStore.GetPoints(user.Name);
+                //user.Points = await StoreManager.UserStore.GetPoints(user.Name);
             }
         }
 

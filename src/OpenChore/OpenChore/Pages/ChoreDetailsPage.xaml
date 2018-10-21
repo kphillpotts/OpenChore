@@ -12,7 +12,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
-        <localViews:ChildHeaderView BindingContext="{Binding User}"/>
+        <localViews:ChildHeaderView/>
         
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>

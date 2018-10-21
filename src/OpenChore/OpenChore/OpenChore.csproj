@@ -27,7 +27,6 @@
     <Compile Remove="DataStore\Mock\DataStore.cs" />
     <Compile Remove="Models\ChoreAssignment.cs" />
     <Compile Remove="Models\User.cs" />
-    <Compile Remove="ViewModels\MainViewModel.cs" />
     <Compile Remove="ViewModels\ChildHeaderViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -11,7 +11,9 @@ namespace OpenChore.Views
     {
         public ChildHeaderView()
         {
+            BindingContext = ViewModelLocator.MainViewModel;
             InitializeComponent();
+
         }
 
         void Handle_Tapped(object sender, System.EventArgs e)

@@ -26,10 +26,10 @@ namespace OpenChore.DataStore.Mock
             await InsertAsync(new User() { Name = "Charlie", ImageUrl = "Charlie.png" });
             await InsertAsync(new User() { Name = "Alex", ImageUrl = "Alex.png" });
 
-            foreach (var item in mockUsers)
-            {
-                item.Points = await GetPoints(item.Name);
-            }
+            //foreach (var item in mockUsers)
+            //{
+            //    item.Points = await GetPoints(item.Name);
+            //}
         }
 
         private async Task<User> CreateMockuser(string name, string imageUrl)
@@ -58,8 +58,8 @@ namespace OpenChore.DataStore.Mock
                 await InitializeStore();
 
             var user = mockUsers.FirstOrDefault(u => u.Name == id);
-            if (user != null)
-                user.Points = await StoreManager.UserStore.GetPoints(id);
+            //if (user != null)
+                //user.Points = await StoreManager.UserStore.GetPoints(id);
 
             return user;
         }

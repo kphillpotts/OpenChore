@@ -9,18 +9,10 @@ namespace OpenChore.Pages
 {
     public partial class ChildChorePage : ContentPage
     {
-        private ChildChoreViewModel vm;
-
-        public ChildChorePage(User user)
+        public ChildChorePage()
         {
             InitializeComponent();
-            BindingContext = vm = new ChildChoreViewModel(user, DateTime.Now);
-        }
-
-        protected async override void OnAppearing()
-        {
-            base.OnAppearing();
-            await vm.LoadChores();
+            BindingContext = ViewModelLocator.MainViewModel;
         }
 
         void Handle_ItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)

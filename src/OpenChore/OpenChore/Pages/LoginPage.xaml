@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="OpenChore.Pages.LoginPage">
+             x:Class="OpenChore.Pages.LoginPage"
+             >
 
     <Grid>
         <Grid.RowDefinitions>
@@ -19,7 +20,9 @@
         </StackLayout>
         
         <ListView x:Name="UserList" Grid.Row="1" 
-                  ItemsSource="{Binding Users}" SeparatorVisibility="None">
+                  ItemsSource="{Binding Users}" 
+                  SelectedItem="{Binding SelectedUser, Mode=TwoWay}"
+                  SeparatorVisibility="None">
             <ListView.ItemTemplate>
                 <DataTemplate>
                 <TextCell Text="{Binding Name}"/>

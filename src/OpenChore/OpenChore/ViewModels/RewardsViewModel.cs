@@ -60,7 +60,7 @@ namespace OpenChore.ViewModels
         {
             Name = reward.Name;
             RedeemPoints = reward.RedeemValue;
-            RemainingPoints = user.Points > RedeemPoints ? "Unlocked!" : $"{RedeemPoints - user.Points} points remaining";
+            //RemainingPoints = user.Points > RedeemPoints ? "Unlocked!" : $"{RedeemPoints - user.Points} points remaining";
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

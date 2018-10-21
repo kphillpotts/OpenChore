@@ -157,4 +157,12 @@
       <Name>OpenChore</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Quicksand-Bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Quicksand-Light.ttf" />
+    <BundleResource Include="Resources\Quicksand-Medium.ttf" />
+    <BundleResource Include="Resources\Quicksand-Regular.ttf" />
+  </ItemGroup>
 </Project>

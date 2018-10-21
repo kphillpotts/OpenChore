@@ -7,7 +7,7 @@ namespace OpenChore.Models
     {
         public string Name { get; set; }
         public string ImageUrl { get; set; }
-        public int Points { get; set; }
+        //public int Points { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
     }

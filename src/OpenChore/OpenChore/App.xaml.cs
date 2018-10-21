@@ -7,12 +7,24 @@ using Xamarin.Forms.Xaml;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace OpenChore
 {
+
+    public static class ViewModelLocator
+    {
+        static MainViewModel mainViewModel;
+
+        public static MainViewModel MainViewModel =>
+           mainViewModel ?? (mainViewModel = new MainViewModel());
+    }
+
     public partial class App : Application
     {
+        //public static MainViewModel MainViewModel { get; set; }
+
         public App()
         {
             InitializeComponent();
             ViewModelBase.Init();
+            //MainViewModel = new MainViewModel();
             MainPage = new NavigationPage( new LoginPage());
         }
 
