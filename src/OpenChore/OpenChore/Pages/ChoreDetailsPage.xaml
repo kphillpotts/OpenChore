@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:localViews="clr-namespace:OpenChore.Views"
+    x:Class="OpenChore.Pages.ChoreDetailsPage">
+    
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <localViews:ChildHeaderView BindingContext="{Binding User}"/>
+        
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <StackLayout Orientation="Vertical"
+                         HorizontalOptions="Center"
+                         Margin="20"
+                         Grid.Row="0">
+                    <Label HorizontalTextAlignment="Center" Text="{Binding ChoreName}" FontSize="Large"/>
+                    <Label HorizontalTextAlignment="Center" Text="{Binding ChoreDescription}"/>
+                    <Label HorizontalTextAlignment="Center" Text="{Binding ChorePoints, StringFormat='{0} points'}"/>
+                </StackLayout>
+            
+            <BoxView BackgroundColor="Yellow" 
+                     WidthRequest="100" 
+                     HeightRequest="100"
+                     Grid.Row="1" 
+                     VerticalOptions="Center" 
+                     HorizontalOptions="Center"/>
+            
+            <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Grid.Row="2" Margin="20">
+                <Button Text="Not Yet" BackgroundColor="Red" TextColor="White" WidthRequest="100" 
+                        Command="{Binding ChoreUndoneCommand}"
+                        />
+                <Button Text="Nailed It!" BackgroundColor="Green" TextColor="White" WidthRequest="100" 
+                        Command="{Binding ChoreDoneCommand}"/>
+            </StackLayout>
+                    
+        </Grid>
+    </Grid>
+    
+    
+</ContentPage>

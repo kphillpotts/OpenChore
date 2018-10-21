@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="OpenChore.Pages.LoginPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <StackLayout Grid.Row="0" Margin="10,50">
+            <Label Text="Chores" 
+                   FontSize="Large" 
+                   HorizontalOptions="Center"/>
+            <Label Text="Welcome, select a user"
+                   HorizontalOptions="Center"/>
+        </StackLayout>
+        
+        <ListView x:Name="UserList" Grid.Row="1" 
+                  ItemsSource="{Binding Users}" SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                <TextCell Text="{Binding Name}"/>
+                    </DataTemplate>
+            </ListView.ItemTemplate>
+            
+            </ListView>
+        
+        <Button Text="Parents Login" 
+                x:Name="ParentsLoginButton"
+                Grid.Row="2"
+                HorizontalOptions="End"
+                Margin="10" BackgroundColor="Blue"
+                TextColor="White"/>
+    </Grid>
+</ContentPage>

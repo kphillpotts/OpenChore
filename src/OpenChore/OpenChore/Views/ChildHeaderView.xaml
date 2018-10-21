@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="OpenChore.Views.ChildHeaderView">
+
+    <Grid VerticalOptions="Start" BackgroundColor="Gray" Padding="30">
+        <Label Text="{Binding Name}" HorizontalOptions="Start">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Handle_Tapped"/>
+            </Label.GestureRecognizers>
+        </Label>
+        <Label Text="{Binding Points, StringFormat='{0} points'}" HorizontalOptions="End">
+           <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Handle_Tapped_1"/>
+            </Label.GestureRecognizers> 
+        </Label>
+    </Grid>
+    
+    
+</ContentView>
