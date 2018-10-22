@@ -10,16 +10,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
+    <PackageReference Include="Xamarin.Forms" Version="3.3.0.912540" />
     <PackageReference Include="Refractored.MvvmHelpers" Version="1.3.0" />
-    <PackageReference Include="Dates.Recurring" Version="1.1.24" />
     <PackageReference Include="LiveXAML" Version="2.1.44" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
+    <PackageReference Include="Sharpnado.Forms.HorizontalListView" Version="0.9.4" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
     <Folder Include="Pages\" />
     <Folder Include="Services\" />
     <Folder Include="Views\" />
+    <Folder Include="Styles\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Pages\ChildChorePage.cs" />
@@ -33,5 +35,6 @@
     <ProjectReference Include="..\OpenChore.Models\OpenChore.Models.csproj" />
     <ProjectReference Include="..\OpenChore.DataStore.Abstractions\OpenChore.DataStore.Abstractions.csproj" />
     <ProjectReference Include="..\OpenChore.DataStore.Mock\OpenChore.DataStore.Mock.csproj" />
+    <ProjectReference Include="..\Dates.Recurring\Dates.Recurring.csproj" />
   </ItemGroup>
 </Project>

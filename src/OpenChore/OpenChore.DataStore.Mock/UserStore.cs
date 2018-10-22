@@ -22,9 +22,9 @@ namespace OpenChore.DataStore.Mock
 
             initialized = true;
 
-            await InsertAsync(new User() { Name = "Rose", ImageUrl = "Rose.png" });
-            await InsertAsync(new User() { Name = "Charlie", ImageUrl = "Charlie.png" });
-            await InsertAsync(new User() { Name = "Alex", ImageUrl = "Alex.png" });
+            await InsertAsync(new User() { Name = "Rose", ImageUrl = "Images/Avatars/Monster1Avatar.png" });
+            await InsertAsync(new User() { Name = "Charlie", ImageUrl = "Images/Avatars/Monster2Avatar.png" });
+            await InsertAsync(new User() { Name = "Alex", ImageUrl = "Images/Avatars/Monster3Avatar.png" });
 
             //foreach (var item in mockUsers)
             //{

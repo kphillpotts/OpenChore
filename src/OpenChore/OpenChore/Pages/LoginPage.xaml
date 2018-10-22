@@ -2,40 +2,93 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="OpenChore.Pages.LoginPage"
-             >
+             xmlns:circle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+              xmlns:renderedViews="clr-namespace:Sharpnado.Presentation.Forms.RenderedViews;assembly=Sharpnado.Presentation.Forms"
 
+             NavigationPage.HasNavigationBar="False"
+             >
+    
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="AUTO"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         
-        <StackLayout Grid.Row="0" Margin="10,50">
+        <Image Source="ChoreBackground.png" BackgroundColor="Red" Aspect="AspectFill"/>
+        <Image Source="WhiteHeaderPath" VerticalOptions="End" Aspect="AspectFill" Margin="0"/>
+        <Image Source="choresHeading.png" Grid.Row="1" />
+        
+        <StackLayout Grid.Row="2" HorizontalOptions="Center">
+        <Label Text="Who are you?" Style="{DynamicResource H2Label}"/>
+        </StackLayout>
+            <!--     <StackLayout Grid.Row="0" Margin="10,50" >
             <Label Text="Chores" 
                    FontSize="Large" 
                    HorizontalOptions="Center"/>
             <Label Text="Welcome, select a user"
                    HorizontalOptions="Center"/>
-        </StackLayout>
+        </StackLayout>-->
         
-        <ListView x:Name="UserList" Grid.Row="1" 
+<!--        <renderedViews:HorizontalListView
+            ItemHeight="100"
+            ItemWidth="100"
+            ItemSpacing="5" Grid.Row="3"
+            BackgroundColor="Yellow"
+            WidthRequest="300"
+            HeightRequest="100"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            SnapStyle="Center"
+            ItemsSource="{Binding Users}" >
+            
+            
+                <renderedViews:HorizontalListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <BoxView WidthRequest="50" HeightRequest="50" BackgroundColor="Blue"/>
+                        
+                    </ViewCell>
+                    </DataTemplate>
+                </renderedViews:HorizontalListView.ItemTemplate>
+        
+            
+        </renderedViews:HorizontalListView>
+-->        
+        <ListView x:Name="UserList" Grid.Row="3" 
                   ItemsSource="{Binding Users}" 
+                  RowHeight="90"
                   SelectedItem="{Binding SelectedUser, Mode=TwoWay}"
                   SeparatorVisibility="None">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                <TextCell Text="{Binding Name}"/>
-                    </DataTemplate>
+                    <ViewCell>
+                    <Grid HorizontalOptions="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="90"/>
+                            </Grid.RowDefinitions>
+                            <circle:CircleImage BackgroundColor="Red" Source="{Binding ImageUrl}" WidthRequest="75" BorderThickness="3" BorderColor="{DynamicResource AccentColor}" HeightRequest="75" Aspect="AspectFill" VerticalOptions="Center" HorizontalOptions="Start"/>
+                        <Label Grid.Column="1" Margin="0" Style="{DynamicResource H2Label}" TextColor="{DynamicResource AccentColor}" Text="{Binding Name}" VerticalOptions="Center"/>
+                    </Grid>
+                    </ViewCell>
+                </DataTemplate>
             </ListView.ItemTemplate>
             
             </ListView>
         
-        <Button Text="Parents Login" 
+
+               
+        <Button Text="Parent Login >" 
                 x:Name="ParentsLoginButton"
-                Grid.Row="2"
-                HorizontalOptions="End"
-                Margin="10" BackgroundColor="Blue"
-                TextColor="White"/>
+                Style="{DynamicResource TextButton}"
+                Grid.Row="4"
+                HorizontalOptions="End"/>
+        
     </Grid>
 </ContentPage>

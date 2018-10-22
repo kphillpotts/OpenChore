@@ -148,7 +148,13 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
+    <PackageReference Include="Xamarin.Forms" Version="3.3.0.912540" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
+      <Version>3.0.0.5</Version>
+    </PackageReference>
+    <PackageReference Include="Sharpnado.Forms.HorizontalListView">
+      <Version>0.9.4</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -164,5 +170,21 @@
     <BundleResource Include="Resources\Quicksand-Light.ttf" />
     <BundleResource Include="Resources\Quicksand-Medium.ttf" />
     <BundleResource Include="Resources\Quicksand-Regular.ttf" />
+    <BundleResource Include="Resources\ChoreBackground.png" />
+    <BundleResource Include="Resources\choresHeading.png" />
+    <BundleResource Include="Resources\WhiteHeaderPath.png" />
+    <BundleResource Include="Resources\Images\Avatars\Monster1Avatar.png" />
+    <BundleResource Include="Resources\Images\Avatars\Monster1Avatar%402x.png" />
+    <BundleResource Include="Resources\Images\Avatars\Monster1Avatar%403x.png" />
+    <BundleResource Include="Resources\Images\Avatars\Monster2Avatar.png" />
+    <BundleResource Include="Resources\Images\Avatars\Monster2Avatar%402x.png" />
+    <BundleResource Include="Resources\Images\Avatars\Monster2Avatar%403x.png" />
+    <BundleResource Include="Resources\Images\Avatars\Monster3Avatar.png" />
+    <BundleResource Include="Resources\Images\Avatars\Monster3Avatar%402x.png" />
+    <BundleResource Include="Resources\Images\Avatars\Monster3Avatar%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Images\" />
+    <Folder Include="Resources\Images\Avatars\" />
   </ItemGroup>
 </Project>

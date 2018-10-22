@@ -102,6 +102,12 @@ namespace OpenChore.ViewModels
             set => _user.Name = value;
         }
 
+        public string ImageUrl
+        {
+            get => _user.ImageUrl;
+            set => _user.ImageUrl = value;
+        }
+
         public int Points
         {
             get => _points;

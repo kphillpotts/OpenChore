@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenChore.DataStore.Abstrac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenChore.DataStore.Mock", "OpenChore.DataStore.Mock\OpenChore.DataStore.Mock.csproj", "{6678F353-E35A-44A2-BF83-A76AD836FB27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dates.Recurring", "Dates.Recurring\Dates.Recurring.csproj", "{3FB42CB1-956E-4D17-A606-BE51EA547559}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -139,5 +141,21 @@ Global
 		{6678F353-E35A-44A2-BF83-A76AD836FB27}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
 		{6678F353-E35A-44A2-BF83-A76AD836FB27}.AppStore|iPhone.ActiveCfg = Release|Any CPU
 		{6678F353-E35A-44A2-BF83-A76AD836FB27}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{3FB42CB1-956E-4D17-A606-BE51EA547559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FB42CB1-956E-4D17-A606-BE51EA547559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FB42CB1-956E-4D17-A606-BE51EA547559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FB42CB1-956E-4D17-A606-BE51EA547559}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FB42CB1-956E-4D17-A606-BE51EA547559}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{3FB42CB1-956E-4D17-A606-BE51EA547559}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{3FB42CB1-956E-4D17-A606-BE51EA547559}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{3FB42CB1-956E-4D17-A606-BE51EA547559}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{3FB42CB1-956E-4D17-A606-BE51EA547559}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{3FB42CB1-956E-4D17-A606-BE51EA547559}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{3FB42CB1-956E-4D17-A606-BE51EA547559}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{3FB42CB1-956E-4D17-A606-BE51EA547559}.Release|iPhone.Build.0 = Release|Any CPU
+		{3FB42CB1-956E-4D17-A606-BE51EA547559}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{3FB42CB1-956E-4D17-A606-BE51EA547559}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{3FB42CB1-956E-4D17-A606-BE51EA547559}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{3FB42CB1-956E-4D17-A606-BE51EA547559}.AppStore|iPhone.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
