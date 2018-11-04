@@ -6,10 +6,16 @@
     <x:Double x:Key="ButtonFontSize">24</x:Double>
     <x:Double x:Key="BodySize">20</x:Double>
     <x:String x:Key="FontFamily">Quicksand-Bold</x:String>
+    <x:String x:Key="FontFamilyLight">Quicksand-Regular</x:String>
     
 <!--    <OnPlatform x:Key="RegularFontFamily" x:TypeArguments="x:String"
             iOS="HelveticaNeue"
             Android="sans-serif" />-->
+    
+      <Style TargetType="NavigationPage">
+        <Setter Property="BarBackgroundColor" Value="{DynamicResource AccentColor}"/>
+        <Setter Property="BarTextColor" Value="White"/>
+      </Style>
     
     <Style x:Key="H1Label" TargetType="Label">
         <Setter Property="TextColor" Value="{DynamicResource AccentColor}" />
@@ -23,6 +29,11 @@
         <Setter Property="FontFamily" Value="{DynamicResource FontFamily}"/>
        </Style>
     
+    <Style x:Key="BodyLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource White}" />
+        <Setter Property="FontSize" Value="{DynamicResource BodySize}" />
+        <Setter Property="FontFamily" Value="{DynamicResource FontFamilyLight}"/>
+       </Style>
     <Style x:Key="TextButton" TargetType="Button">
         <Setter Property="FontSize" Value="{DynamicResource ButtonFontSize}"/>
         <Setter Property="FontFamily" Value="{DynamicResource FontFamily}"/>

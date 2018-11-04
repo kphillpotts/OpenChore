@@ -3,9 +3,12 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:localViews="clr-namespace:OpenChore.Views"
+    xmlns:swipeCardView="clr-namespace:MLToolkit.Forms.SwipeCardView;assembly=MLToolkit.Forms.SwipeCardView"
     x:Class="OpenChore.Pages.ChoreDetailsPage">
     
-    <Grid>
+
+    
+ <!--   <Grid>
         
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -47,6 +50,6 @@
                     
         </Grid>
     </Grid>
-    
+ -->   
     
 </ContentPage>

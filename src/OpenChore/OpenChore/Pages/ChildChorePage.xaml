@@ -2,29 +2,97 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:localViews="clr-namespace:OpenChore.Views"
-             x:Class="OpenChore.Pages.ChildChorePage">
+              xmlns:circle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="OpenChore.Pages.ChildChorePage"
+             Title="Chores"
+             NavigationPage.HasNavigationBar="true"
+             >
 
     <Grid>
         <Grid.RowDefinitions>
         
-            <RowDefinition Height="Auto"/>
-            
+            <RowDefinition Height="100"/>
+             <RowDefinition Height="Auto"/>
+           
             <RowDefinition Height="*"/>
             
         </Grid.RowDefinitions>
+       
+<!--        <BoxView BackgroundColor="Red"/>-->
+
         
-        <localViews:ChildHeaderView/>
-        
-        <ListView x:Name="ChoreList" ItemsSource="{Binding SelectedUserChores}" Grid.Row="1"
-                  ItemTapped="Handle_ItemTapped">
+
+
+<!--        <localViews:ChildHeaderView/>-->
+        <StackLayout Grid.Row="1">
+           <Slider Minimum="0" Maximum="2" Value="1"  x:Name="weightSlider"/>
+           <Slider Minimum="0" Maximum="400" Value="50"  x:Name="posSlider"/>
+            </StackLayout>
+        <ListView x:Name="ChoreList" ItemsSource="{Binding SelectedUserChores}" Grid.Row="0" Grid.RowSpan="3"
+                  ItemTapped="Handle_ItemTapped" HasUnevenRows="true" SeparatorVisibility="None" >
+            <ListView.Header>
+                <BoxView BackgroundColor="Transparent" HeightRequest="120" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+            </ListView.Header>
+            <ListView.Footer>
+                <BoxView BackgroundColor="Transparent" HeightRequest="400" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+            </ListView.Footer>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding ChoreName}"
-                              Detail="{Binding ChoreStatus}"/>
+                    <ViewCell>
+                        <Frame Padding="0" Margin="20" CornerRadius="4" HasShadow="false" BorderColor="{DynamicResource AccentColor}" BackgroundColor="#5685B0">
+                        <Grid RowSpacing="0" Margin="20">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <circle:CircleImage 
+                                    FillColor="#33000000"
+                            WidthRequest="60" Source="{Binding ChoreImage}"
+                                BorderThickness="3" 
+                            BorderColor="#FFFFFF" 
+                            HeightRequest="60" Aspect="AspectFill" 
+                            VerticalOptions="Center" 
+                            
+                            HorizontalOptions="Center"/>
+  
+                            <StackLayout Grid.Row="1">
+                            <Label Text="{Binding ChoreName}" Margin="0" TextColor="White" HorizontalTextAlignment="Center" HorizontalOptions="Center" Style="{DynamicResource H2Label}" />
+                            <Label Text="{Binding ChoreDescription}"  Margin="0,0,0,10" TextColor="White" HorizontalTextAlignment="Center" HorizontalOptions="Center" Style="{DynamicResource BodyLabel}" />
+                            </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
             
         </ListView>
+        
+                <skia:SKCanvasView PaintSurface="OnCanvasViewPaintSurface" x:Name="SkiaCanvas"
+                           HeightRequest="100" InputTransparent="true"
+                                   HorizontalOptions="Fill" Grid.Row="0">
+            <skia:SKCanvasView.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnCanvasViewTapped" />
+        </skia:SKCanvasView.GestureRecognizers>
+        </skia:SKCanvasView>
+
+            <circle:CircleImage x:Name="ProfileLogo" 
+                                BackgroundColor="Red" 
+                                Source="{Binding SelectedUser.ImageUrl}" 
+                            WidthRequest="40" 
+                                BorderThickness="3" 
+                            BorderColor="Black" 
+                            HeightRequest="40" Aspect="AspectFill" 
+                                            TranslationX="200"
+            TranslationY="50"
+                            VerticalOptions="Start" 
+                            Scale="2"
+                            HorizontalOptions="Start"/>
+        
+        <Label x:Name="UsernameLabel" Text="{Binding SelectedUser.Name}" Style="{DynamicResource H2Label}"
+                Margin="0" Scale="1" TranslationX="50" TextColor="#FFFFFF" />
+ 
+
     </Grid>
     
     

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+
+             
+xmlns:swipecards="clr-namespace:SwipeCards.Controls;assembly=SwipeCards.Controls"
+             
+             
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="OpenChore.Pages.SwipeChorePage">
+    <ContentPage.Content>
+        
+            <swipecards:CardStackView
+            x:Name="SwipeControl"
+                            ItemsSource="{Binding SelectedUserChores}"
+                          SwipedLeftCommand="{Binding SwipedLeftCommand}"
+                            SwipedRightCommand="{Binding SwipedRightCommand}"
+        >
+     <swipecards:CardStackView.ItemTemplate>
+          <DataTemplate>
+            
+              <Grid InputTransparent="True" Margin="30">
+                        <BoxView BackgroundColor="Yellow"/>
+                        <Label Text="{Binding ChoreName}"/>
+                </Grid>
+                
+          </DataTemplate>
+      </swipecards:CardStackView.ItemTemplate>
+</swipecards:CardStackView>
+    </ContentPage.Content>
+</ContentPage>

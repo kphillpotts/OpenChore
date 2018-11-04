@@ -15,6 +15,10 @@
     <PackageReference Include="LiveXAML" Version="2.1.44" />
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
     <PackageReference Include="Sharpnado.Forms.HorizontalListView" Version="0.9.4" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.60.3" />
+    <PackageReference Include="XFUtils" Version="1.0.0" />
+    <PackageReference Include="MLToolkit.Forms.SwipeCardView" Version="1.2.0" />
+    <PackageReference Include="Forms.Controls.SwipeCards" Version="0.4.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
@@ -22,6 +26,8 @@
     <Folder Include="Services\" />
     <Folder Include="Views\" />
     <Folder Include="Styles\" />
+    <Folder Include="Images\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Pages\ChildChorePage.cs" />
@@ -36,5 +42,13 @@
     <ProjectReference Include="..\OpenChore.DataStore.Abstractions\OpenChore.DataStore.Abstractions.csproj" />
     <ProjectReference Include="..\OpenChore.DataStore.Mock\OpenChore.DataStore.Mock.csproj" />
     <ProjectReference Include="..\Dates.Recurring\Dates.Recurring.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Images\ChoreBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\ChoreBackground.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

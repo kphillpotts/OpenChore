@@ -85,7 +85,7 @@ namespace OpenChore.DataStore.Mock
                 StartDateTime = DateTime.Now.AddDays(-1),
                 Active = true,
                 Description = description,
-                ImageUrl = "",
+                ImageUrl = "Images/ChoreIcons/Toothbrush",
                 IsRepeating = true,
                 RepeatingEvery = 1,
                 RepeatingUnit = RepeatingUnitType.Day

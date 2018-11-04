@@ -15,14 +15,13 @@ namespace OpenChore.ViewModels
         private ChoreAward _awardModel { get; set; }
         private string _userName;
         private string _choreStatus;
-
-
+        private string _choreImage;
 
         public string ChoreName { get => _choreModel.Name; set => _choreModel.Name = value; }
         public string ChoreDescription { get => _choreModel.Description; set => _choreModel.Description = value; }
         public int ChorePoints { get => _choreModel.Points; set => _choreModel.Points = value; }
         public string ChoreStatus { get => _choreStatus; set => SetProperty(ref _choreStatus, value); }
-
+        public string ChoreImage { get => _choreModel.ImageUrl; set => _choreModel.ImageUrl = value;}
         public ChoreItemViewModel(string userName, ChoreDefinition chore, ChoreAward award)
         {
             this._awardModel = award;
